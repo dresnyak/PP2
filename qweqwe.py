@@ -2,7 +2,7 @@ print("pp2")
 
 print("Hello World!")
 
-a = 10
-b = 20
+a = 5
+b = 15
 
 print(a + b)
