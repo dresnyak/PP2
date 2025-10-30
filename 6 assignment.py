@@ -1,7 +1,7 @@
 from functools import reduce
 import time
 import math
- 
+
 def multiply_list(numbers):
     return reduce(lambda x, y: x * y, numbers)
 
