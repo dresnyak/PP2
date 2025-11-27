@@ -98,7 +98,7 @@ class Coins(pygame.sprite.Sprite):
 
     def check(self, player_rect):
         """
-        Calculate sum of coins, getted on the frame, and delete corresponding coins
+        Calculate sum of coins, got on the frame, and delete corresponding coins
         """
         new_coords = []
         res = 0
@@ -132,10 +132,10 @@ class Player(pygame.sprite.Sprite):
         pressed_keys = pygame.key.get_pressed()
         if self.rect.left > 0:
             if pressed_keys[K_LEFT]:
-                self.rect.move_ip(-5, 0)
+                self.rect.move_ip(-8, 0)
         if self.rect.right < SCREEN_WIDTH:
             if pressed_keys[K_RIGHT]:
-                self.rect.move_ip(5, 0)
+                self.rect.move_ip(8, 0)
 
     def draw(self, surface):
         """
