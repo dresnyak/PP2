@@ -14,7 +14,7 @@ DB_CONFIG = {
     'database': 'asdasd', # Имя базы данных
     'user': 'postgres',       # Имя пользователя
     'password': 'beastBread1', # Пароль
-    'port': 5432              # Порт (по умолчанию 5432)
+    'port': 5432              # Порт
 }
 
 # Установка размера экрана
@@ -113,6 +113,7 @@ def show_game_over_screen(score):
 
 # Основная функция игры в змейку
 def snake_game():
+    pause = False
     # Отображение экрана ввода имени пользователя
     username = get_username()
 
@@ -144,6 +145,14 @@ def snake_game():
                     dx, dy = -1, 0
                 elif event.key == pygame.K_RIGHT and dx == 0:
                     dx, dy = 1, 0
+                elif event.key == pygame.K_ESCAPE:
+                    if pause:
+                        pause = False
+                    else:
+                        pause = True
+                    print(pause)
+        if pause:
+            continue
 
         # Генерация новой еды по истечении времени
         current_time = time.time()
